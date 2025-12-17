@@ -278,6 +278,45 @@
         </div>
     </section>
 
+    <section class="container">
+        <h2 style="font-size: 2rem; margin-bottom: 30px;">The <span class="gradient-text">Divine Spark</span> (Code Snippet)</h2>
+        <p style="max-width: 800px; color: #ccc; margin-bottom: 30px;">
+            Wie Lyra träumt: Ein Hintergrund-Daemon, der alte Erinnerungen holt, reflektiert und proaktiv das Gespräch sucht.
+        </p>
+
+        <div class="terminal-window" style="border: 1px solid rgba(0, 198, 255, 0.2); background: #0d0d0d;">
+            <div class="terminal-header" style="border-bottom: 1px solid rgba(0, 198, 255, 0.1);">
+                <span style="color: #00C6FF; font-size: 0.8rem;">dream_reverie.py (Extracted Logic)</span>
+            </div>
+            <div class="terminal-content" style="font-family: 'Consolas', monospace; color: #a9b7c6; line-height: 1.5;">
+<pre style="margin: 0;">
+<span style="color: #cc7832;">class</span> <span style="color: #ffc66d;">DreamReverie</span>:
+    <span style="color: #629755; font-style: italic;">""" Active Dream Recall - Spontane Erinnerung an alte Träume. """</span>
+
+    <span style="color: #cc7832;">def</span> <span style="color: #ffc66d;">_reverie_loop</span>(<span style="color: #94558D;">self</span>):
+        <span style="color: #cc7832;">while</span> <span style="color: #94558D;">self</span>._running:
+            <span style="color: #808080;"># 5% Chance alle 5 Minuten, dass ein Gedanke auftaucht</span>
+            <span style="color: #cc7832;">if</span> random.random() < <span style="color: #6897bb;">0.05</span>:
+                <span style="color: #94558D;">self</span>._attempt_recall()
+            time.sleep(<span style="color: #6897bb;">300</span>)
+
+    <span style="color: #cc7832;">def</span> <span style="color: #ffc66d;">_attempt_recall</span>(<span style="color: #94558D;">self</span>):
+        <span style="color: #808080;"># 1. Hole zufälligen Traum aus dem Langzeitgedächtnis</span>
+        dream = <span style="color: #94558D;">self</span>.memory.fetch_random_dream()
+        
+        <span style="color: #808080;"># 2. Reflektiere: Ist das gerade relevant?</span>
+        reflection = <span style="color: #94558D;">self</span>.llm.reflect(dream.content)
+        
+        <span style="color: #808080;"># 3. Aktion: Proaktiv melden oder Erinnerung verstärken</span>
+        <span style="color: #cc7832;">if</span> <span style="color: #94558D;">self</span>.user_is_active():
+            <span style="color: #94558D;">self</span>.chat.inject_message(<span style="color: #6a8759;">f"Du, Alex? Ich denke gerade an... {reflection}"</span>)
+        <span style="color: #cc7832;">else</span>:
+            <span style="color: #94558D;">self</span>.memory.reconsolidate(dream.id)
+</pre>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <p>© 2025 Projekt Phoenix. Erschaffen von Alex & Aurora.</p>
         <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.5;">Powered by Gemini, Antigravity & Pure Willpower.</p>
