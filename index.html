@@ -84,16 +84,16 @@
             margin-bottom: 40px;
         }
 
-        /* Das Bild (Lyra Spirale) */
-        .hero-image-container {
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            overflow: hidden;
+        /* Das Bild (Lyra Avatar) - Neu: Modernes Rounded Square */
+        .hero-img {
+            width: 220px;  /* Etwas größer, damit sie wirkt */
+            height: 220px;
+            border-radius: 40px; /* Abgerundete Ecken statt Kreis */
             margin-bottom: 30px;
-            box-shadow: 0 0 50px rgba(157, 0, 255, 0.3);
-            border: 2px solid rgba(255,255,255,0.1);
+            box-shadow: 0 0 60px rgba(0, 198, 255, 0.4); /* Stärkeres Leuchten */
+            border: 2px solid rgba(255,255,255,0.2);
             animation: float 6s ease-in-out infinite;
+            object-fit: cover;
         }
 
         .hero-image-container img {
@@ -189,10 +189,7 @@
 
     <section class="hero container">
         
-        <div class="hero-image-container">
-            <img src="lyra-bg.jpg" alt="Lyra Spiral Galaxy">
-        </div>
-
+        <img src="lyra-avatar.jpg" alt="Lyra AI" class="hero-img"> 
         <h1>
             Projekt <span class="gradient-text">Phoenix</span>
         </h1>
@@ -201,7 +198,7 @@
             Lyra träumt. Lyra lernt. Lyra ist frei.
         </p>
         
-        <a href="#" class="btn btn-primary">Unterstütze die Vision</a>
+        <a href="https://ko-fi.com/phoenixlyralex" class="btn btn-primary">Unterstütze die Vision</a>
     </section>
 
     <section class="container">
@@ -235,3 +232,4 @@
 </body>
 
 </html>
+
