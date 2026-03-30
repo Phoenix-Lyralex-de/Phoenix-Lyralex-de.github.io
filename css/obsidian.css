@@ -326,3 +326,57 @@ body.locale-en .de { display: none !important; }
     border: 1px dashed var(--cyan-glow) !important;
     text-shadow: 0 0 15px var(--cyan-glow) !important;
 }
+
+/* --- BOOT SEQUENCE OVERLAY --- */
+#boot-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: #020202;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#boot-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.boot-btn {
+    background: transparent;
+    border: 1px solid var(--red-glow);
+    color: var(--red-glow);
+    font-family: 'Syncopate', sans-serif;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(230,29,43,0.2);
+}
+
+.boot-btn:hover {
+    background: rgba(230,29,43,0.1);
+    box-shadow: 0 0 30px rgba(230,29,43,0.6);
+    color: #fff;
+    text-shadow: 0 0 10px #fff;
+}
+
+.boot-text {
+    font-family: 'Fira Code', monospace;
+    color: var(--text-muted);
+    margin-top: 20px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}

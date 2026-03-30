@@ -13,6 +13,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Rajdhani:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="locale-de">
+    <!-- Boot Sequence / Audio Gate -->
+    <div id="boot-overlay">
+        <button id="init-neural-link" class="boot-btn">[ INITIALIZE NEURAL LINK ]</button>
+        <div class="boot-text">AWAITING USER OVERRIDE // AUDIO ENGINE STANDBY</div>
+    </div>
+
     <div id="ambient-overlay"></div>
     <div id="background-image"></div> 
 
@@ -267,6 +273,7 @@
     <!-- JS Injection -->
     <script src="js/neural_link.js"></script>
     <script src="js/directory_tree.js"></script>
+    <script src="js/audio_engine.js"></script>
     <script>
         // Language Toggle Logic
         function toggleLanguage() {
